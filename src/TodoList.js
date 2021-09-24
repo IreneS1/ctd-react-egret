@@ -1,31 +1,31 @@
 import React from 'react'
 import TodoListItem from './TodoListItem';
 
-const todoList = [
-    {
-      id: 1,
-      title: 'Read instructions',
-    },
-    {
-      id: 2,
-      title: 'Complete assignment',
-    },
-    {
-      id: 3,
-      title: 'Commit work',
-    },
-  ];
+// const todoList = [
+//     {
+//       id: 1,
+//       title: 'Read instructions',
+//     },
+//     {
+//       id: 2,
+//       title: 'Complete assignment',
+//     },
+//     {
+//       id: 3,
+//       title: 'Commit work',
+//     },
+//   ];
 
-function TodoList() {
-    return (
-        <div>
+const TodoList = ({todoList}) => {
+  return (
+    <div>
             <ul>
-                {todoList.map(function (item) {
+                {todoList.map((item) => {
                 return <TodoListItem key={item.id} todo={item}/>
                 })}
             </ul>
-        </div>
-    )
+    </div>
+  )
 }
 
 export default TodoList;
